@@ -12,7 +12,7 @@ description: 李小龙 · 资深前端工程师的个人介绍
 
 <div class="profile-card">
   <div class="avatar">
-    <img src="/codeway/avatar.svg" alt="李小龙" />
+    <img src="./avatar.svg" alt="李小龙" />
   </div>
   <div class="info">
     <h1>李小龙</h1>

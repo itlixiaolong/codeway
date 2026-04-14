@@ -6,7 +6,7 @@ hero:
   text: "11 年前端实战 | 架构 · 工程化 · 性能优化 · 面试复盘"
   tagline: "专注企业级前端开发实践，分享可落地的架构方案、性能优化、工程化最佳实践与中大厂面试经验。"
   image:
-    src: /codeway/avatar.svg
+    src: /avatar.svg
     alt: 李小龙
   actions:
     - theme: brand
@@ -143,7 +143,7 @@ features:
 
 <div class="about-section">
   <div class="avatar">
-    <img src="/codeway/avatar.svg" alt="李小龙" />
+    <img src="/avatar.svg" alt="李小龙" />
   </div>
   <h3 class="name">李小龙</h3>
   <p class="title">资深前端工程师 | 前端架构师</p>
