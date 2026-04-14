@@ -1,0 +1,91 @@
+# GitLab CI/CD 配置文件
+# 支持 GitLab Pages 免费一键部署
+
+stages:
+  - install
+  - build
+  - deploy
+
+# 缓存配置
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .npm/
+
+# 安装依赖
+install:
+  stage: install
+  image: node:20-alpine
+  script:
+    - echo 'registry=https://registry.npmmirror.com' >> .npmrc
+    - npm ci --legacy-peer-deps
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 1 hour
+  only:
+    - main
+    - develop
+
+# 构建
+build:
+  stage: build
+  image: node:20-alpine
+  needs: ['install']
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - docs/.vitepress/dist/
+    expire_in: 1 week
+  only:
+    - main
+    - develop
+
+# 部署到 GitLab Pages
+pages:
+  stage: deploy
+  image: alpine:latest
+  needs: ['build']
+  script:
+    - echo 'Deploying to GitLab Pages...'
+    - mv docs/.vitepress/dist public
+    - echo "Pages deployed successfully"
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+  only:
+    - main
+
+# 开发环境预览
+deploy-preview:
+  stage: deploy
+  image: node:20-alpine
+  needs: ['build']
+  script:
+    - npm run preview
+  environment:
+    name: preview/${CI_COMMIT_REF_NAME}
+    url: https://${CI_PROJECT_PATH_SLUG}.${CI_PAGES_DOMAIN}
+  only:
+    - branches
+  except:
+    - main
+    - develop
+
+# MR 自动预览（可选）
+mr-preview:
+  stage: deploy
+  image: node:20-alpine
+  needs: ['build']
+  script:
+    - echo "Creating MR preview environment..."
+    - mv docs/.vitepress/dist public
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+  only:
+    - merge_requests

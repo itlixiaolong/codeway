@@ -1,0 +1,720 @@
+// VitePress 自定义主题样式
+// ==========================================
+
+@use './variables' as *;
+
+// 渐变背景 Mixin
+@mixin gradient-primary {
+  background: linear-gradient(135deg, $brand-primary 0%, #7C3AED 100%);
+}
+
+@mixin gradient-tech {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+}
+
+// 玻璃态效果
+@mixin glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+// 深色模式玻璃态
+@mixin glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// 卡片悬停效果
+@mixin card-hover {
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl, $shadow-glow;
+  }
+}
+
+// 文字渐变
+@mixin text-gradient {
+  background: linear-gradient(135deg, $brand-primary 0%, #7C3AED 50%, $brand-accent 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// ==========================================
+// 基础样式覆盖
+// ==========================================
+
+:root {
+  --vp-c-brand-1: #{$brand-primary};
+  --vp-c-brand-2: #{$brand-primary-dark};
+  --vp-c-brand-3: #{$brand-primary};
+  --vp-c-brand-soft: rgba(22, 93, 255, 0.14);
+
+  --vp-font-family-base: #{$font-sans};
+  --vp-font-family-mono: #{$font-mono};
+
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #{$gray-50};
+  --vp-c-bg-alt: #{$gray-100};
+
+  --vp-code-font-size: 0.875em;
+  --vp-code-block-bg: #161b22;
+}
+
+.dark {
+  --vp-c-bg: #0a0e17;
+  --vp-c-bg-soft: #0f172a;
+  --vp-c-bg-alt: #111827;
+  --vp-code-block-bg: #161b22;
+}
+
+// ==========================================
+// 导航栏样式
+// ==========================================
+
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, $brand-primary 0%, #7C3AED 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-link {
+    font-weight: 500;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+}
+
+// ==========================================
+// 首页 Hero 区域
+// ==========================================
+
+.VPHero {
+  padding: 4rem 2rem 6rem;
+
+  .name {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, $brand-primary 0%, #7C3AED 50%, $brand-accent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+    color: $text-secondary;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: $line-height-relaxed;
+  }
+
+  .actions {
+    gap: 1rem;
+
+    .VPButton {
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: $radius-lg;
+      transition: all $transition-base;
+
+      &.primary {
+        background: linear-gradient(135deg, $brand-primary 0%, #7C3AED 100%);
+        border: none;
+        box-shadow: 0 4px 14px rgba(22, 93, 255, 0.4);
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(22, 93, 255, 0.5);
+        }
+      }
+
+      &.alt {
+        border: 2px solid $brand-primary;
+        color: $brand-primary;
+        background: transparent;
+
+        &:hover {
+          background: rgba(22, 93, 255, 0.08);
+        }
+      }
+    }
+  }
+}
+
+// ==========================================
+// 功能特性区域
+// ==========================================
+
+.VPFeatures {
+  padding: 4rem 2rem;
+
+  .feature {
+    background: var(--vp-c-bg-soft);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: $radius-xl;
+    padding: 2rem;
+    transition: all $transition-base;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      border-color: rgba(22, 93, 255, 0.2);
+    }
+
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--vp-c-text-1);
+    }
+
+    p {
+      color: $text-secondary;
+      line-height: $line-height-relaxed;
+    }
+  }
+}
+
+// ==========================================
+// 文章卡片
+// ==========================================
+
+.article-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: $radius-xl;
+  padding: 1.5rem;
+  transition: all $transition-base;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(22, 93, 255, 0.3);
+  }
+
+  .title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--vp-c-text-1);
+    margin-bottom: 0.75rem;
+    line-height: $line-height-snug;
+  }
+
+  .desc {
+    color: $text-secondary;
+    font-size: 0.875rem;
+    line-height: $line-height-relaxed;
+    margin-bottom: 1rem;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: $text-tertiary;
+
+    .tag {
+      background: rgba(22, 93, 255, 0.1);
+      color: $brand-primary;
+      padding: 0.25rem 0.75rem;
+      border-radius: $radius-full;
+      font-weight: 500;
+    }
+  }
+}
+
+// ==========================================
+// 技术栈展示
+// ==========================================
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 2rem 0;
+
+  .tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    background: var(--vp-c-bg-soft);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: $radius-lg;
+    transition: all $transition-base;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(22, 93, 255, 0.15);
+      border-color: $brand-primary;
+    }
+
+    .tech-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .tech-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--vp-c-text-1);
+    }
+  }
+}
+
+// ==========================================
+// 开源项目卡片
+// ==========================================
+
+.project-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: $radius-xl;
+  padding: 1.5rem;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .project-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, $brand-primary 0%, #7C3AED 100%);
+      border-radius: $radius-lg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .project-info {
+      .name {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--vp-c-text-1);
+      }
+
+      .type {
+        font-size: 0.75rem;
+        color: $text-tertiary;
+      }
+    }
+  }
+
+  .project-desc {
+    color: $text-secondary;
+    font-size: 0.875rem;
+    line-height: $line-height-relaxed;
+    margin-bottom: 1rem;
+  }
+
+  .project-stats {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.75rem;
+    color: $text-tertiary;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+}
+
+// ==========================================
+// 关于我区域
+// ==========================================
+
+.about-section {
+  background: var(--vp-c-bg-soft);
+  border-radius: $radius-2xl;
+  padding: 3rem;
+  text-align: center;
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    overflow: hidden;
+    border: 4px solid $brand-primary;
+    box-shadow: 0 0 30px rgba(22, 93, 255, 0.3);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--vp-c-text-1);
+    margin-bottom: 0.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+    color: $brand-primary;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .bio {
+    color: $text-secondary;
+    line-height: $line-height-relaxed;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(22, 93, 255, 0.1);
+      color: $brand-primary;
+      border-radius: $radius-full;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all $transition-base;
+
+      &:hover {
+        background: $brand-primary;
+        color: white;
+      }
+    }
+  }
+}
+
+// ==========================================
+// 侧边栏样式
+// ==========================================
+
+.VPDocAside {
+  .outline-title {
+    font-weight: 700;
+    color: var(--vp-c-text-1);
+  }
+
+  .outline-link {
+    font-size: 0.875rem;
+    color: $text-secondary;
+    transition: color $transition-fast;
+
+    &:hover,
+    &.active {
+      color: $brand-primary;
+    }
+  }
+}
+
+// ==========================================
+// 文档内容样式
+// ==========================================
+
+.VPDoc {
+  .content-container {
+    max-width: 800px;
+  }
+}
+
+.vp-doc {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, $brand-primary 0%, #7C3AED 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(22, 93, 255, 0.1);
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--vp-c-text-1);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--vp-c-text-1);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: $line-height-relaxed;
+    color: var(--vp-c-text-1);
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: $brand-primary;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all $transition-fast;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  code {
+    background: rgba(22, 93, 255, 0.08);
+    padding: 0.2em 0.4em;
+    border-radius: $radius-sm;
+    font-size: 0.875em;
+    color: $brand-primary;
+  }
+
+  pre {
+    border-radius: $radius-lg;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  blockquote {
+    background: rgba(22, 93, 255, 0.05);
+    border-left: 4px solid $brand-primary;
+    border-radius: $radius-md;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+
+    p {
+      color: $text-secondary;
+      margin: 0;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    border-radius: $radius-lg;
+    overflow: hidden;
+
+    th {
+      background: var(--vp-c-bg-soft);
+      font-weight: 700;
+      text-align: left;
+      padding: 1rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+    }
+
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    tr:hover td {
+      background: rgba(22, 93, 255, 0.02);
+    }
+  }
+
+  ul, ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+
+    li {
+      line-height: $line-height-relaxed;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+// ==========================================
+// 自定义容器
+// ==========================================
+
+.custom-block {
+  border-radius: $radius-lg;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+
+  &.tip {
+    background: rgba(22, 93, 255, 0.08);
+    border-left: 4px solid $brand-primary;
+  }
+
+  &.warning {
+    background: rgba(255, 125, 0, 0.08);
+    border-left: 4px solid $warning;
+  }
+
+  &.danger {
+    background: rgba(245, 63, 63, 0.08);
+    border-left: 4px solid $danger;
+  }
+
+  .custom-block-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+// ==========================================
+// 页脚样式
+// ==========================================
+
+.VPFooter {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+
+  .message {
+    color: $text-secondary;
+    font-size: 0.875rem;
+  }
+
+  .copyright {
+    color: $text-tertiary;
+    font-size: 0.75rem;
+  }
+}
+
+// ==========================================
+// 响应式适配
+// ==========================================
+
+@media (max-width: 768px) {
+  .VPHero {
+    padding: 2rem 1rem 4rem;
+
+    .name {
+      font-size: 2.5rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+    }
+  }
+
+  .VPFeatures {
+    padding: 2rem 1rem;
+
+    .feature {
+      padding: 1.5rem;
+    }
+  }
+
+  .tech-stack {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+
+    .tech-item {
+      padding: 1rem 0.5rem;
+
+      .tech-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1.5rem;
+      }
+
+      .tech-name {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .about-section {
+    padding: 2rem 1.5rem;
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+// ==========================================
+// 滚动条美化
+// ==========================================
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-300;
+  border-radius: 4px;
+
+  &:hover {
+    background: $gray-400;
+  }
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: $gray-600;
+
+  &:hover {
+    background: $gray-500;
+  }
+}
+
+// ==========================================
+// 选中样式
+// ==========================================
+
+::selection {
+  background: rgba(22, 93, 255, 0.2);
+  color: inherit;
+}
