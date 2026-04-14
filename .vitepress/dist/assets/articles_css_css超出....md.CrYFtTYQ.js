@@ -1,0 +1,13 @@
+import{_ as a,o as n,c as e,ae as p}from"./chunks/framework.DhtYoOpx.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"articles/css/css超出....md","filePath":"articles/css/css超出....md","lastUpdated":1776146674000}'),l={name:"articles/css/css超出....md"};function i(r,s,c,t,o,d){return n(),e("div",null,[...s[0]||(s[0]=[p(`<h3 id="_1-css超出一行用点表示" tabindex="-1">1.css超出一行用点表示 <a class="header-anchor" href="#_1-css超出一行用点表示" aria-label="Permalink to &quot;1.css超出一行用点表示&quot;">​</a></h3><div class="language- vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>white-space:nowrap;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>overflow:hidden;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>text-overflow:ellipsis;</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_2-css超出二行用点表示" tabindex="-1">2.css超出二行用点表示 <a class="header-anchor" href="#_2-css超出二行用点表示" aria-label="Permalink to &quot;2.css超出二行用点表示&quot;">​</a></h3><div class="language- vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>overflow:hidden;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>text-overflow:ellipsis;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>display:-webkit-box;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>-webkit-box-orient:vertical;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>-webkit-line-clamp:2;</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div>`,4)])])}const m=a(l,[["render",i]]);export{u as __pageData,m as default};

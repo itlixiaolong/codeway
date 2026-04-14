@@ -11,34 +11,34 @@ hero:
   actions:
     - theme: brand
       text: 探索文章
-      link: /codeway/articles/
+      link: /articles/
     - theme: alt
       text: 关于我
-      link: /codeway/about/
+      link: /about/
 
 features:
   - icon: 📚
     title: 最新文章
     details: 按时间倒序排列，涵盖前端各个领域的深度技术文章
-    link: /codeway/articles/
+    link: /articles/
     linkText: 查看全部
 
   - icon: 🛠️
     title: 技术栈
     details: Vue / React / TS / Vite / Node / 跨端 / 性能优化
-    link: /codeway/categories/
+    link: /categories/
     linkText: 了解更多
 
   - icon: 🚀
     title: 开源项目
     details: 组件库、CLI工具、效能插件等可复用解决方案
-    link: /codeway/projects/
+    link: /projects/
     linkText: 查看项目
 
   - icon: 👨‍💻
     title: 关于我
     details: 11年前端经验，专注企业级架构与性能优化
-    link: /codeway/about/
+    link: /about/
     linkText: 了解更多
 ---
 

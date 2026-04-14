@@ -10,7 +10,7 @@ export default defineConfig({
   cleanUrls: true,
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/codeway/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['meta', { name: 'author', content: '李小龙' }],
     ['meta', { name: 'keywords', content: '前端架构,工程化,性能优化,Vue,React,TypeScript,Vite' }],
     ['meta', { property: 'og:type', content: 'website' }],
@@ -19,7 +19,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: '/codeway/avatar.svg',
+    logo: '/avatar.svg',
     siteTitle: 'Bruce Lee',
 
     nav: [
