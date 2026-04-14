@@ -10,7 +10,7 @@ export default defineConfig({
   cleanUrls: true,
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/codeway/favicon.svg' }],
     ['meta', { name: 'author', content: '李小龙' }],
     ['meta', { name: 'keywords', content: '前端架构,工程化,性能优化,Vue,React,TypeScript,Vite' }],
     ['meta', { property: 'og:type', content: 'website' }],
@@ -19,7 +19,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: '/avatar.svg',
+    logo: '/codeway/avatar.svg',
     siteTitle: 'Bruce Lee',
 
     nav: [
@@ -189,7 +189,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/itlixiaolong/blog/edit/main/:path',
+      pattern: 'https://github.com/itlixiaolong/codeway/edit/master/:path',
       text: '在 GitHub 上编辑此页'
     },
 
