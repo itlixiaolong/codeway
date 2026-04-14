@@ -2,13 +2,13 @@
 
 ## 1. 按仓库名称搜索
 
-```github
+```bash
 repo:username/repository-name
 ```
 
 ## 2. 按语言搜索
 
-```github
+```bash
 language:javascript
 language:typescript
 language:vue
@@ -17,20 +17,20 @@ language:css
 
 ## 3. 按星标数搜索
 
-```github
+```bash
 stars:>1000
 stars:100..500
 ```
 
 ## 4. 按更新时间搜索
 
-```github
+```bash
 pushed:>2024-01-01
 ```
 
 ## 5. 按主题搜索
 
-```github
+```bash
 topic:vue
 topic:react
 topic:frontend
@@ -38,20 +38,20 @@ topic:frontend
 
 ## 6. 按作者搜索
 
-```github
+```bash
 author:username
 user:username
 ```
 
 ## 7. 组合搜索
 
-```github
+```bash
 vue stars:>500 pushed:>2024-01-01
 ```
 
 ## 8. 搜索代码内容
 
-```github
+```bash
 in:file "关键词"
 in:path "关键词"
 in:readme "关键词"
@@ -59,21 +59,21 @@ in:readme "关键词"
 
 ## 9. 按大小搜索
 
-```github
+```bash
 size:>1000   # 大于 1MB
 size:<100    # 小于 100KB
 ```
 
 ## 10. 按 license 搜索
 
-```github
+```bash
 license:mit
 license:apache-2.0
 ```
 
 ## 常用搜索示例
 
-```github
+```bash
 # 高质量的 Vue 组件库
 vue stars:>1000 language:javascript
 
