@@ -4,6 +4,7 @@ export default defineConfig({
   title: '李小龙 · 前端技术博客',
   description: '11年前端实战 | 架构 · 工程化 · 性能优化 · 面试复盘',
   lang: 'zh-CN',
+  base: '/codeway/',  // GitHub Pages 部署路径
   appearance: true,
   lastUpdated: true,
   cleanUrls: true,
