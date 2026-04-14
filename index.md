@@ -6,39 +6,39 @@ hero:
   text: "11 年前端实战 | 架构 · 工程化 · 性能优化 · 面试复盘"
   tagline: "专注企业级前端开发实践，分享可落地的架构方案、性能优化、工程化最佳实践与中大厂面试经验。"
   image:
-    src: /avatar.svg
+    src: /codeway/avatar.svg
     alt: 李小龙
   actions:
     - theme: brand
       text: 探索文章
-      link: /articles/
+      link: /codeway/articles/
     - theme: alt
       text: 关于我
-      link: /about/
+      link: /codeway/about/
 
 features:
   - icon: 📚
     title: 最新文章
     details: 按时间倒序排列，涵盖前端各个领域的深度技术文章
-    link: /articles/
+    link: /codeway/articles/
     linkText: 查看全部
 
   - icon: 🛠️
     title: 技术栈
     details: Vue / React / TS / Vite / Node / 跨端 / 性能优化
-    link: /categories/
+    link: /codeway/categories/
     linkText: 了解更多
 
   - icon: 🚀
     title: 开源项目
     details: 组件库、CLI工具、效能插件等可复用解决方案
-    link: /projects/
+    link: /codeway/projects/
     linkText: 查看项目
 
   - icon: 👨‍💻
     title: 关于我
     details: 11年前端经验，专注企业级架构与性能优化
-    link: /about/
+    link: /codeway/about/
     linkText: 了解更多
 ---
 
@@ -143,7 +143,7 @@ features:
 
 <div class="about-section">
   <div class="avatar">
-    <img src="/avatar.svg" alt="李小龙" />
+    <img src="/codeway/avatar.svg" alt="李小龙" />
   </div>
   <h3 class="name">李小龙</h3>
   <p class="title">资深前端工程师 | 前端架构师</p>
@@ -154,7 +154,7 @@ features:
     <a href="https://github.com/itlixiaolong" target="_blank">
       <span>GitHub</span>
     </a>
-    <a href="https://my-blogs-bay.vercel.app" target="_blank">
+    <a href="https://itlixiaolong.github.io/codeway" target="_blank">
       <span>博客</span>
     </a>
     <a href="mailto:18231851990@163.com">
