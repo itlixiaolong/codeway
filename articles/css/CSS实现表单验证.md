@@ -98,7 +98,7 @@
 ### <font style="color:black;">pattern</font>
 <font style="color:black;">再来</font><font style="color:black;"> </font><font style="color:rgb(30, 107, 184);">pattern</font><font style="color:black;"> </font><font style="color:black;">属性。</font>
 
-<font style="color:rgb(30, 107, 184);"><input pattern=""></font><font style="color:black;"> </font><font style="color:black;">用于校验输入</font><font style="color:black;"> </font><font style="color:rgb(30, 107, 184);">value</font><font style="color:black;"> </font><font style="color:black;">是否有效。</font>
+<font style="color:rgb(30, 107, 184);"><input pattern="" /></font><font style="color:black;"> </font><font style="color:black;">用于校验输入</font><font style="color:black;"> </font><font style="color:rgb(30, 107, 184);">value</font><font style="color:black;"> </font><font style="color:black;">是否有效。</font>
 
 <font style="color:black;">我们康康DEMO：</font><font style="color:rgb(220, 220, 220);background-color:rgb(30, 30, 30);">  
 </font>
