@@ -75,6 +75,7 @@ export default defineConfig({
             { text: 'Vue2 和 Vue3 区别', link: '/articles/vue/vue2和vue3的技术实现的区别' },
             { text: 'Vue3 技术优势', link: '/articles/vue/vue3的技术优势' },
             { text: 'Vue3 reactive 简易实现', link: '/articles/vue/vue3中reactive的简易实现' },
+            { text: '极简版 Vue3', link: '/articles/vue/极简版vue3' },
           ]
         },
         {
