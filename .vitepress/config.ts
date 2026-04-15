@@ -72,6 +72,7 @@ export default defineConfig({
             { text: 'Vue3 UI 框架', link: '/articles/vue/vue3-ui-frameworks' },
             { text: 'Vue 源码学习', link: '/articles/vue/vue-source-learning' },
             { text: 'Vue3 技术详解', link: '/articles/vue/vue3中的一些技术详解' },
+            { text: 'Vue2 和 Vue3 区别', link: '/articles/vue/vue2和vue3的技术实现的区别' },
           ]
         },
         {
