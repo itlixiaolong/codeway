@@ -69,6 +69,7 @@ Vue3 响应式的完整流程，可分为“初始化代理 → 依赖收集 →
 步骤1：初始化代理（创建响应式对象）
 
 当我们调用 reactive 或 ref API 创建响应式数据时，Vue3 会为目标对象创建 Proxy 代理，绑定对应的拦截器。
+```javascript
 
 // 简化版 reactive 逻辑
 function reactive(target) {
@@ -101,6 +102,7 @@ function reactive(target) {
     }
   });
 }
+```
 
 步骤2：依赖收集（track 函数）
 
