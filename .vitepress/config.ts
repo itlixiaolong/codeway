@@ -77,7 +77,7 @@ export default defineConfig({
             { text: 'Vue3 reactive 简易实现', link: '/articles/vue/vue3中reactive的简易实现' },
             { text: 'Vue3 ref 和 reactive 区别', link: '/articles/vue/vue3中ref和reactive的区别' },
             { text: 'Vue 和 React 区别', link: '/articles/vue/vue和react在技术实现和使用上的区别' },
-            { text: 'Vue2 与 Vue3 Diff 算法', link: '/articles/vue/Vue2 与 Vue3 Diff 算法区别（面试版）' },
+            { text: 'Vue2 与 Vue3 Diff 算法', link: '/articles/vue/Vue2与Vue3Diff算法区别' },
             { text: 'Vue3 ElementUI 二次封装', link: '/articles/vue/vue3中怎么对elementUI进行二次封装' },
             { text: '极简版 Vue3', link: '/articles/vue/极简版vue3' },
           ]
