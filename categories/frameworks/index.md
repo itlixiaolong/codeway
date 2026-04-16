@@ -15,6 +15,8 @@
 - [Vue3 reactive 简易实现](/articles/vue/vue3中reactive的简易实现)
 - [Vue3 ref 和 reactive 的区别](/articles/vue/vue3中ref和reactive的区别)
 - [Vue 和 React 在技术实现和使用上的区别](/articles/vue/vue和react在技术实现和使用上的区别)
+- [Vue2 与 Vue3 Diff 算法区别](/articles/vue/Vue2 与 Vue3 Diff 算法区别（面试版）)
+- [Vue3 对 ElementUI 二次封装](/articles/vue/vue3中怎么对elementUI进行二次封装)
 - [极简版 Vue3](/articles/vue/极简版vue3)
 
 ### React
