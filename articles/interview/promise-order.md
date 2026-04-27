@@ -1,4 +1,5 @@
 # promise 执行逻辑
+
 ## 一、Promise 里捕获 `throw` 报错的三种方式
 
 ### 1. 最常用：`.catch()`
@@ -45,7 +46,7 @@ fn();
 
 ---
 
-## 二、关键知识点
+## 二、原理解析
 1. Promise 构造器里：
    - 代码报错 / `throw xxx` **等价于** 执行 `reject(xxx)`
 2. 只要是 **reject / throw**：
@@ -86,7 +87,7 @@ new Promise((res, rej) => {
 3. 实际开发优先用：`try/catch + await` 或 `.catch()`。
 
 ## 五、面试经典例题：「throw、reject、宏微任务结合」的面试经典例题
-# Promise 高频面试题：throw + reject + 宏微任务 经典组合
+
 ## 题目1：基础区分 throw / reject
 ```js
 new Promise((resolve, reject) => {
