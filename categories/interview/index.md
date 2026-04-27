@@ -152,7 +152,11 @@ function shallowEqual<T extends Record<string, any>>(
 
 ### 面试文章
 
-- [自己封装的组件库怎么实现css和js按需加载](/articles/interview/component-pack)
+- [http缓存策略](/articles/interview/cache)
+- [手写组件库：实现原生支持按需引入 JS + CSS（最标准方案）](/articles/interview/component-pack)
+- [跨域 iframe](/articles/interview/iframe)
+- [手写一个完成版promise](/articles/interview/promise)
+- [css中常见的长度单位 px/em/rem](/articles/interview/rem-em)
 
 ## 面试技巧
 

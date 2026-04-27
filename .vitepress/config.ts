@@ -161,7 +161,11 @@ export default defineConfig({
         {
           text: '面试',
           items: [
-            { text: '组件库按需加载', link: '/articles/interview/component-pack' },
+            { text: 'http缓存策略', link: '/articles/interview/cache' },
+            { text: '手写组件库：实现原生支持按需引入 JS + CSS（最标准方案）', link: '/articles/interview/component-pack' },
+            { text: '跨域 iframe', link: '/articles/interview/iframe' },
+            { text: '手写一个完成版promise', link: '/articles/interview/promise' },
+            { text: 'css中常见的长度单位 px/em/rem', link: '/articles/interview/rem-em' },
           ]
         }
       ],
