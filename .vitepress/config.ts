@@ -169,6 +169,7 @@ export default defineConfig({
             { text: 'css中常见的长度单位 px/em/rem', link: '/articles/interview/rem-em' },
             { text: '泛型中如何定义 T 的约束条件（全网最通俗 + 实战版）', link: '/articles/interview/T' },
             { text: 'vue3中如果watchEffect中有异步操作，异步操作后面的依赖还会收集吗?', link: '/articles/interview/vue3-watchEffect' },
+            { text: '手写call-apply-bind函数', link: '/articles/interview/bind' },
           ]
         }
       ],
