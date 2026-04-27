@@ -150,6 +150,12 @@ function shallowEqual<T extends Record<string, any>>(
 
 ## 面试技巧
 
+### 面试文章
+
+- [自己封装的组件库怎么实现css和js按需加载](/articles/interview/component-pack)
+
+## 面试技巧
+
 ::: tip 资深/架构岗面试要点
 1. **深度比广度更重要**：对核心技术要有深度理解
 2. **结合实践**：用具体项目经验支撑观点

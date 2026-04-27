@@ -91,6 +91,10 @@
 - [Linux Vim 操作](/articles/linux/linux-vim)
 - [Nginx 使用配置](/articles/linux/linux-nginx)
 
+### 面试
+
+- [自己封装的组件库怎么实现css和js按需加载](/articles/interview/component-pack)
+
 ### 工具技巧
 
 - [Git 常见报错及解决办法](/articles/utils/git-troubleshooting)

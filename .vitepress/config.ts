@@ -157,6 +157,14 @@ export default defineConfig({
           ]
         }
       ],
+      '/categories/interview/': [
+        {
+          text: '面试',
+          items: [
+            { text: '组件库按需加载', link: '/articles/interview/component-pack' },
+          ]
+        }
+      ],
       '/categories/utils/': [
         {
           text: '工具技巧',
