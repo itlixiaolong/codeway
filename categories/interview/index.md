@@ -4,6 +4,7 @@
 
 - [http缓存策略](/articles/interview/cache)
 - [手写组件库：实现原生支持按需引入 JS + CSS（最标准方案）](/articles/interview/component-pack)
+- [defer 和 async 完整区别（面试满分版，超好记）](/articles/interview/defer-async)
 - [跨域 iframe](/articles/interview/iframe)
 - [promise 执行逻辑](/articles/interview/promise-order)
 - [手写一个完成版promise](/articles/interview/promise)

@@ -186,10 +186,3 @@ import { Button } from 'my-components'
 做到这 3 点，你的组件库就**原生支持按需引入 JS + CSS**，和 Element Plus、AntD 一模一样！
 
 ---
-
-### 我可以帮你
-如果你告诉我：
-- 你的组件库是 **Vue2 / Vue3 / React**？
-- 使用 **Vite / Webpack** 打包？
-
-我可以直接给你**生成完整可直接使用的模板项目**，包括目录、打包配置、package.json。

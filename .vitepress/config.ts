@@ -163,6 +163,7 @@ export default defineConfig({
           items: [
             { text: 'http缓存策略', link: '/articles/interview/cache' },
             { text: '手写组件库：实现原生支持按需引入 JS + CSS（最标准方案）', link: '/articles/interview/component-pack' },
+            { text: 'defer 和 async 完整区别（面试满分版，超好记）', link: '/articles/interview/defer-async' },
             { text: '跨域 iframe', link: '/articles/interview/iframe' },
             { text: 'promise 执行逻辑', link: '/articles/interview/promise-order' },
             { text: '手写一个完成版promise', link: '/articles/interview/promise' },
