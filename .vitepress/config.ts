@@ -30,6 +30,7 @@ export default defineConfig({
       { text: 'CSS', link: '/categories/css/' },
       { text: 'Node', link: '/categories/node/' },
       { text: 'Linux', link: '/categories/linux/' },
+      { text: '面试', link: '/categories/interview/' },
       { text: '架构', link: '/categories/architecture/' },
       { text: '关于我', link: '/about/' },
     ],
