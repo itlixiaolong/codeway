@@ -164,8 +164,11 @@ export default defineConfig({
             { text: 'http缓存策略', link: '/articles/interview/cache' },
             { text: '手写组件库：实现原生支持按需引入 JS + CSS（最标准方案）', link: '/articles/interview/component-pack' },
             { text: '跨域 iframe', link: '/articles/interview/iframe' },
+            { text: 'promise 执行逻辑', link: '/articles/interview/promise-order' },
             { text: '手写一个完成版promise', link: '/articles/interview/promise' },
             { text: 'css中常见的长度单位 px/em/rem', link: '/articles/interview/rem-em' },
+            { text: '泛型中如何定义 T 的约束条件（全网最通俗 + 实战版）', link: '/articles/interview/T' },
+            { text: 'vue3中如果watchEffect中有异步操作，异步操作后面的依赖还会收集吗?', link: '/articles/interview/vue3-watchEffect' },
           ]
         }
       ],

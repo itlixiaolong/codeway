@@ -1,8 +1,6 @@
 # 所有文章
 
-## 文章列表
-
-### JavaScript / TypeScript
+## JavaScript / TypeScript
 
 - [JavaScript 骚操作技巧](/articles/js/es6/js-tricks)
 - [JS高级用法：像大神一样玩转JavaScript](/articles/js/es6/JS高级用法：像大神一样玩转JavaScript)
@@ -17,7 +15,7 @@
 - [any、void、never、unknown 的区别](/articles/js/ts/ts-type-differences)
 - [TypeScript 编程资源库](/articles/js/ts/ts-resources)
 
-### Vue
+## Vue
 
 - [Vue 高级开发技巧](/articles/vue/vue-advanced-tips)
 - [Vue 专家不想让你知道的秘密](/articles/vue/vue-secrets)
@@ -34,7 +32,7 @@
 - [Vue3 对 ElementUI 二次封装](/articles/vue/vue3中怎么对elementUI进行二次封装)
 - [极简版 Vue3](/articles/vue/极简版vue3)
 
-### React
+## React
 
 - [JSX 非工程化使用](/articles/vue/react/react-jsx-without-build)
 - [Redux connect 实现](/articles/vue/react/react-redux-connect)
@@ -53,7 +51,7 @@
 - [Redux 中间件原理](/articles/vue/react/redux的中间键原理)
 - [Redux combineReducers](/articles/vue/react/redux-combineReducers%20的实现)
 
-### CSS
+## CSS
 
 - [CSS 3D 环绕效果](/articles/css/css-3d-effect)
 - [BEM 规范详解](/articles/css/css-bem)
@@ -75,12 +73,12 @@
 - [CSS超出显示省略号](/articles/css/css超出....md)
 - [CSS居中元素的方法](/articles/css/css中居中元素的方法.md)
 
-### Node
+## Node
 
 - [minimist 命令行参数解析](/articles/node/npm-minimist)
 - [hash、chunkhash、contenthash 的区别](/articles/node/hash、chunkhash、cententhash的区别)
 
-### Linux
+## Linux
 
 - [Linux 基本命令操作](/articles/linux/linux-basics)
 - [Linux 打包压缩与解压缩](/articles/linux/linux-compress)
@@ -91,15 +89,18 @@
 - [Linux Vim 操作](/articles/linux/linux-vim)
 - [Nginx 使用配置](/articles/linux/linux-nginx)
 
-### 面试
+## 面试
 
 - [http缓存策略](/articles/interview/cache)
 - [手写组件库：实现原生支持按需引入 JS + CSS（最标准方案）](/articles/interview/component-pack)
 - [跨域 iframe](/articles/interview/iframe)
+- [promise 执行逻辑](/articles/interview/promise-order)
 - [手写一个完成版promise](/articles/interview/promise)
 - [css中常见的长度单位 px/em/rem](/articles/interview/rem-em)
+- [泛型中如何定义 T 的约束条件（全网最通俗 + 实战版）](/articles/interview/T)
+- [vue3中如果watchEffect中有异步操作，异步操作后面的依赖还会收集吗?](/articles/interview/vue3-watchEffect)
 
-### 工具技巧
+## 工具技巧
 
 - [Git 常见报错及解决办法](/articles/utils/git-troubleshooting)
 - [Git 库的操作流程](/articles/utils/git-workflow)
@@ -109,7 +110,7 @@
 - [GitHub 搜索技巧](/articles/utils/github-search-tips)
 - [Google 搜索技巧](/articles/utils/google-search-tips)
 
-### 高级 / 架构
+## 高级 / 架构
 
 - [前端组件库设计与封装](/articles/senior/2024/component-library)
 - [企业级前端架构设计最佳实践](/articles/senior/2024/enterprise-architecture)

@@ -1,6 +1,6 @@
-### http缓存策略
+# http缓存策略
 
-#### 1.强缓存（http状态码为200）
+## 1.强缓存（http状态码为200）
 
 http中用来判断是否命中强缓存的字段为Expires和Cache-Control，Cache-Control优先级高于Expires。
 
@@ -28,19 +28,19 @@ http中用来判断是否命中强缓存的字段为Expires和Cache-Control，Ca
 >
 > > 设置缓存存储的最大周期，超过这个时间缓存被视为过期 (单位\*\*：秒)，这是一个相对时间（单位：秒）如max-age=7200，这里代表资源的缓存在这个请求之后的2小时内都有效。
 
-#### 2.协商缓存（http状态码为200或者304）
+## 2.协商缓存（http状态码为200或者304）
 
 *   Last-Modified / If-Modified-Since
 *   Etag / If-None-Match
 
 **注意：Etag的优先级是高于 Last-Modified 的**
 
-##### 关于Last-Modified / If-Modified-Since
+### 关于Last-Modified / If-Modified-Since
 
 > 当浏览器第一次访问一个资源的时候，服务器会在response header中返回一个Last-Modified，代表这个资源最后的修改时间，当浏览器再次访问这个资源的时候，会在request header中带上 If-Modified-Since，值为上次请求时服务器返回的 Last-Modified 的值，然后服务器根据资源上次修改的时间确认资源在这段期间内是否更改过，如果没有，则返回==304==，如果有，则返回==200==并返回最新的资源
 
-##### 关于Etag / If-None-Match
+### 关于Etag / If-None-Match
 
 > Etag / If-None-Match 与 Last-Modified / If-Modified-Since的机制类似，不同的是，Etag是通过一个校验码来对比资源是否更改过的，而不是通过资源的修改时间。当一个资源修改时，其校验码也会更改。当浏览器请求资源时，服务器会返回一个Etag字段，然后浏览器下一次请求时，会带上 If-None-Match ，值为上次服务器返回的Etag的值，服务器经过校验码的对比后决定返回==200或304==。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200729153225959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpeGlhb2xvbmcyNDAwMzU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](./1.png)
