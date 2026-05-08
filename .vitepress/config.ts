@@ -174,7 +174,7 @@ export default defineConfig({
             { text: '泛型中如何定义 T 的约束条件（全网最通俗 + 实战版）', link: '/articles/interview/T' },
             { text: 'vue3中如果watchEffect中有异步操作，异步操作后面的依赖还会收集吗?', link: '/articles/interview/vue3-watchEffect' },
             { text: '手写call-apply-bind函数', link: '/articles/interview/bind' },
-            { text: '是的，在同等优化条件下，Vite 打出的包通常比 Webpack 更小（小 5%–15% 左右），而且配置更省心', link: '/articles/interview/webpack-rollup' },
+            { text: '在同等优化条件下，Vite 打出的包通常比 Webpack 更小（小 5%–15% 左右）的原因？', link: '/articles/interview/webpack-rollup' },
           ]
         }
       ],
